@@ -1,0 +1,129 @@
+<html>
+   <head>
+      <title>Slots Game</title>
+   </head>
+   <center>
+      <h1>
+      Color Slots</h2>
+   </center>
+   <style>
+      body{
+      background-color: #F0F8FF;
+      }
+      table{
+      table-layout: fixed;
+      margin: 0 auto;
+      }
+      td{
+      table-layout: fixed;
+      margin: 0 auto;
+      border: 1px solid black;
+      border-collapse: collapse;
+      color: white;
+      font-size: 40;
+      width: 100;
+      height: 100;
+      }
+      th{
+      padding:0 2 0 2;
+      }
+      input {
+      border: 1px outset black;
+      background-color: silver;
+      font-size: 15;
+      height: 100;
+      width: 100;
+      }
+      input:hover {
+      background-color: Red;
+      color: white;
+      }
+      #newRow{
+      padding:15 0 15 0;
+      }
+      #payout, #money{
+      display: inline;
+      }
+   </style>
+   <body>
+      <script src="slots.js"></script>
+      <center>
+         <table>
+            <th></th>
+            <th>My Money:</th>
+            <th>
+               $
+               <div id="money">100</div>
+            </th>
+            <th></th>
+            <th>Payout:</th>
+            <th></th>
+            <th>
+               $
+               <div id="payout">0</div>
+            </th>
+            <tr>
+               <th>Cost $1</th>
+               <th><input type="checkbox" id="aRow" value="aRow"></th>
+               <td id="a1"></td>
+               <th></th>
+               <td id="a2"></td>
+               <th></th>
+               <td id="a3"></td>
+            </tr>
+            <tr>
+               <th id="newRow"></th>
+            </tr>
+            <tr>
+               <th>Cost $1</th>
+               <th><input type="checkbox" id="bRow" value="bRow"></th>
+               <td id="b1"></td>
+               <th></th>
+               <td id="b2"></td>
+               <th></th>
+               <td id="b3"></td>
+            </tr>
+            <tr>
+               <th id="newRow"></th>
+            </tr>
+            <tr>
+               <th>Cost $1</th>
+               <th><input type="checkbox" id="cRow" value="cRow"></th>
+               <td id="c1"></td>
+               <th></th>
+               <td id="c2"></td>
+               <th></th>
+               <td id="c3"></td>
+            </tr>
+            <tr>
+               <th id="newRow"></th>
+            </tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <td><input type='button' value='SPIN' onclick="run()"></td>
+            <th></th>
+            <th></th>
+         </table>
+      </center>
+      <br>
+      <h1>How To Play:</h1>
+      <h3>
+         <ul>
+            <li>Hit spin to run the slot machine.</li>
+            <li>To bet on a row, you must select the checkbox. Each row costs $1.</li>
+            <li>You start with $100. You cannot make bets that you do not have enough money for.</li>
+            <li>There are 6 colors possible, all of which are equally likely</li>
+            <li>Three matching colors in a row pays you the sum of the numbers in the row.</li>
+            <li>If you bet on all three rows, you have the chance to match diagonals, an X pattern, or a blackout.</li>
+            <li>Matching columns DO NOT give a payout.</li>
+            <li>Diagonals pay the sum of the numbers in the diagonal.</li>
+            <li>An X pattern pays $100.</li>
+            <li>A blackout pays $1,000,000.</li>
+            <li>Matching rows still payout when you get diagonals, X's, and blackouts.</li>
+         </ul>
+      </h3>
+      <br><br><br><br>&nbsp
+   </body>
+</html>
